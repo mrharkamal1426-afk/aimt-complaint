@@ -1,9 +1,11 @@
 <?php
 // Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
-define('DB_NAME', 'complaint_portal');
+$conn = new mysqli(
+  getenv('DB_HOST'),
+  getenv('DB_USERNAME'),
+  getenv('DB_PASSWORD'),
+  getenv('DB_DATABASE')
+);
 
 // Establish connection
 try {
