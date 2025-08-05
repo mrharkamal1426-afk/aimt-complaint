@@ -1,0 +1,9 @@
+# Deny access to all files in this directory
+Order deny,allow
+Deny from all
+
+# Allow only specific log files to be written by PHP
+<Files "*.log">
+    Order allow,deny
+    Allow from localhost
+</Files> 
